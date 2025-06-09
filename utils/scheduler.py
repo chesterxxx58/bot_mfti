@@ -23,7 +23,7 @@ async def send_weather_at_time(bot: Bot, time: str):
                     weather = get_weather(user.city)
                     await bot.send_message(
                         chat_id=user.telegram_id,
-                        text=f"⏰ <b>Прогноз погоды на {time}</b>\n\n{weather}"
+                        text=f"<b>Прогноз погоды на {time}</b>\n\n{weather}"
                     )
                 except Exception as e:
                     print(f"Ошибка отправки пользователю {user.telegram_id}: {e}")
